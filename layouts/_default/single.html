@@ -62,6 +62,19 @@
                 {{ end }}
             </p>
 
+            {{ with .Permalink }} 
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a id="url"></span>
+            </p>
+            <script>
+                var url = decodeURI(window.location.href);
+                var alink = document.getElementById('url');
+                alink.setAttribute("href", url);
+                alink.innerHTML = url;
+            </script>
+            {{ end }}
+
             {{ with .Site.Params.license }} 
             <p class="copyright-item">
                     <span>LICENSE:</span>
