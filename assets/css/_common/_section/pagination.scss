@@ -8,6 +8,7 @@
       white-space: nowrap;
       width: 100%;
       padding-top: 2em;
+
       a {
           -webkit-font-smoothing: antialiased;
           font-size: 12px;
@@ -18,21 +19,24 @@
           text-decoration: none;
           transition: 0.3s;
       }
+
       li {
           padding-bottom: 3px;
           margin: 0 20px;
           box-sizing: border-box;
           position: relative;
           display: inline;
+
           &.disabled {
               display: none;
           }
+
           &:hover a {
-              color:  $light-pagination-link-active-color;
+              color: $light-pagination-link-active-color;
           }
 
           .dark-theme &:hover a {
-              color:  $dark-pagination-link-active-color;
+              color: $dark-pagination-link-active-color;
           }
 
           &:before,
@@ -45,8 +49,9 @@
               transition: 0.3s;
               bottom: 0px;
           }
+
           .dark-theme &:before,
-          .dark-theme &:after{
+          .dark-theme &:after {
               background: $dark-pagination-link-active-color;
           }
 
@@ -54,18 +59,23 @@
           &:after .active {
               width: 100%;
           }
+
           &:before {
               left: 50%;
           }
+
           &:after {
               right: 50%;
           }
+
           &:hover {
+
               &:before,
               &:after {
                   width: 50%;
               }
           }
+
           &.active {
               a {
                   color: $light-pagination-link-active-color;
@@ -74,6 +84,7 @@
               .dark-theme & a {
                   color: $dark-pagination-link-active-color;
               }
+
               &:before,
               &:after {
                   width: 60%;

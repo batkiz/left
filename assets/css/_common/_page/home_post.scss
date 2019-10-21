@@ -26,28 +26,33 @@
             .post-meta {
                 a {
                     color: rgba(85, 85, 85, 0.52941) !important;
+
                     .dark-theme & {
                         color: $dark-font-secondary-color !important;
                     }
 
                     &:hover {
                         color: $light-font-secondary-color !important;
+
                         .dark-theme & {
                             color: $dark-font-secondary-color !important;
                         }
                     }
                 }
             }
+
             .post-tags {
                 span {
                     a {
                         color: rgba(85, 85, 85, 0.52941) !important;
+
                         .dark-theme & {
                             color: $dark-font-secondary-color !important;
                         }
 
                         &:hover {
                             color: $light-font-secondary-color !important;
+
                             .dark-theme & {
                                 color: $dark-font-secondary-color !important;
                             }

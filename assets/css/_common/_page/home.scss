@@ -1,11 +1,12 @@
-  
   /** Home **/
-  
+
   .intro {
     transform: translateY(25vh);
     text-align: center;
+
     .avatar {
       padding: 10px;
+
       img {
         width: 128px;
         height: auto;
@@ -20,6 +21,7 @@
         -o-transition: all ease 0.4s;
         transition: all ease 0.4s;
         cursor: pointer;
+
         &:hover {
           position: relative;
           -webkit-transform: translateY(-0.75em);
@@ -32,22 +34,24 @@
       }
     }
   }
-  
+
   h2.description {
     font-size: 1em;
     font-weight: normal;
     padding: 5px;
   }
-  
+
   .social-links {
     a {
-    
+
       padding: 0 5px;
+
       &:hover {
-       
+
         background-color: transparent;
       }
     }
+
     .iconfont {
       font-size: 2em;
     }

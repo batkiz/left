@@ -1,133 +1,114 @@
 /** Font **/
 
-	/* Lato */
-	@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
-	
-	/* Montserrat */
-	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800);
-	
-	/* Roboto */
-	@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+/* Fira Code */
+@import url(https://fonts.loli.net/css?family=Fira+Code&display=swap);
 
-  
- 
-  
-  html {
-    &::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    &::-webkit-scrollbar-thumb {
-      height: 40px;
-      background-color: #eee;
-      border-radius: 16px;
-      &:hover {
-        background-color: #ddd;
-      }
-    }
-  }
-  
-  ::selection {
-    background: rgba(0, 149, 255, 0.1);
-  }
-  
-  html {
-    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft Yahei", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
-  }
-  
-  body {
-    font-size: 11pt;
-    font-weight: 400;
-    line-height: 2em;
-    background-color: $light-background-color;
-    color: $light-font-color;
-    &:before {
-      content: "";
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.05;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      -webkit-filter: grayscale(100%);
-      -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-      -o-filter: grayscale(100%);
-      filter: grayscale(100%);
-      filter: gray;
-    }
+/* Noto Serif SC */
+@import url(https://fonts.loli.net/css?family=Noto+Serif+SC&display=swap);
 
-     &.dark-theme {
-        background-color: $dark-background-color;
-        color: $dark-font-color;
-     }
+
+
+html {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
   }
-  
-  a {
-    color: $light-global-link-color;
+
+  &::-webkit-scrollbar-thumb {
+    height: 40px;
+    background-color: #eee;
+    border-radius: 16px;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
+
+::selection {
+  background: #262a30;
+  color: #fff;
+}
+
+html {
+  font-family: 'Noto Serif SC', serif;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2em;
+  background-color: $light-background-color;
+  color: $light-font-color;
+
+  &:before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.05;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+  }
+
+  &.dark-theme {
+    background-color: $dark-background-color;
+    color: $dark-font-color;
+  }
+}
+
+a {
+  color: $light-global-link-color;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    color: $light-global-link-hover-color;
     text-decoration: none;
     transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  }
+
+  .dark-theme & {
+    color: $dark-global-link-color;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+
     &:hover {
-      color: $light-global-link-hover-color;
+      color: $dark-global-link-hover-color;
       text-decoration: none;
       transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-    }
-
-     .dark-theme & {
-      color: $dark-global-link-color;
-      text-decoration: none;
-      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-
-      &:hover{
-        color: $dark-global-link-hover-color;
-        text-decoration: none;
-        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-      }
     }
   }
-  
-  blockquote {
-    font-size: 1rem;
+}
+
+blockquote {
+  font-size: 1rem;
+  font-family: var(--italic-font);
+  font-weight: 400;
+  color: #999;
+  padding: 0 28px;
+  line-height: 2;
+  margin: 0px;
+  font-style: italic;
+
+  &:after {
+    content: "#blockquote"attr(cite);
     display: block;
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: $light-border-color;
-    padding: 1.5em 1.2em 0.5em 1.2em;
-    margin: 0 0 2em 0;
-    position: relative;
-
-    &:before {
-      content: '\201C';
-      position: absolute;
-      top: 0em;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 3rem;
-      height: 2rem;
-      font: 6em/1.08em 'PT Sans', sans-serif;
-      color: $light-post-link-color;
-      text-align: center;
-      
-       .dark-theme &{
-         color: $dark-post-link-color;
-       }
-    }
-    &:after {
-      content: "#blockquote" attr(cite);
-      display: block;
-      text-align: right;
-      font-size: 0.875em;
-      color: $light-post-link-color;
-
-       .dark-theme &{
-         color: $dark-post-link-color;
-       }
-    }
-
-    .dark-theme & {
-      border-color: $dark-border-color;
-    }
+    text-align: right;
+    font-size: 0.875em;
+    color: #999;
   }
+
+  .dark-theme & {
+    border-color: $dark-border-color;
+  }
+}

@@ -16,16 +16,16 @@
             color: $light-global-link-hover-color;
             transform: scale(1.1);
 
-            .dark-theme &{
-            	 color: $dark-global-link-hover-color;
+            .dark-theme & {
+                color: $dark-global-link-hover-color;
             }
         }
 
         small {
             color: $light-font-secondary-color;
-            
-            .dark-theme &{
-                 color: $dark-global-link-hover-color;
+
+            .dark-theme & {
+                color: $dark-global-link-hover-color;
             }
         }
     }

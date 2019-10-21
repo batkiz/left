@@ -21,12 +21,12 @@
             width: 45%;
             display: flex;
             align-items: flex-start;
-            margin-top:2em;
+            margin-top: 2em;
             min-height: 16em;
             padding: 0 2%;
             position: relative;
 
-            .categories{
+            .categories {
                 overflow: hidden;
             }
         }
@@ -39,6 +39,7 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         max-width: 95%;
+
         &:hover {
             color: $light-global-link-hover-color;
             background-color: transparent;
@@ -56,6 +57,7 @@
             }
         }
     }
+
     .archive-item-date {
         float: right;
         text-align: right;
@@ -75,6 +77,7 @@
     h3 {
         display: inline-block;
     }
+
     span {
         float: right;
         padding-right: 1em;

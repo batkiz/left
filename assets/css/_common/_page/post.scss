@@ -18,18 +18,21 @@
 
     .post-meta {
         color: rgba(85, 85, 85, 0.52941) !important;
+
         .dark-theme & {
             color: $dark-font-secondary-color !important;
         }
 
         a {
             color: $light-post-link-color;
+
             .dark-theme & {
                 color: $dark-post-link-color;
             }
 
             &:hover {
                 color: $light-post-link-hover-color;
+
                 .dark-theme & {
                     color: $dark-post-link-hover-color;
                 }
@@ -48,17 +51,19 @@
             padding-top: .8em;
             padding-bottom: .3em;
         }
+
         h2::before {
             content: "#";
             margin-right: 5px;
             color: $light-post-link-color;
+
             .dark-theme & {
                 color: $dark-post-link-color;
             }
         }
 
         h3::before {
-            content: "|";
+            content: "##";
             margin-right: 5px;
             color: $light-post-link-color;
 
@@ -69,6 +74,7 @@
 
         a {
             color: $light-post-link-color;
+
             .dark-theme & {
                 color: $dark-post-link-color;
             }
@@ -76,6 +82,7 @@
 
         a:hover {
             color: $light-post-link-hover-color;
+
             .dark-theme &:hover {
                 color: $dark-post-link-hover-color;
                 font-weight: bold;
@@ -85,24 +92,20 @@
 
         code,
         pre {
-            padding: 7px;
-            font-size: 13px;
-            font-family: Consolas, Monaco, Menlo, Consolas, monospace;
+            padding: 7px, 7px, 7px, 7px;
+            font-size: 14px;
+            font-family: 'Fira Code', monospace;
             word-break: break-all;
             word-wrap: break-word;
         }
 
         code:not([class]) {
             padding: 5px 5px;
-            background: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 1px 1px 0 #fff, 2px 2px 0 #ddd;
-            margin-left: 3px;
-            margin-right: 3px;
+            border: 0px;
+            border-radius: 0px;
 
             .dark-theme &:not([class]) {
                 background: transparent;
-                box-shadow: 1px 1px 0 $dark-font-secondary-color, 2px 2px 0 $dark-font-secondary-color;
             }
         }
 
@@ -125,7 +128,8 @@
 
         figure {
             text-align: center;
-            img:hover{
+
+            img:hover {
                 cursor: zoom-in;
             }
         }
@@ -150,7 +154,7 @@
             overflow: hidden;
         }
 
-     
+
 
         img[data-action="zoom"] {
             cursor: zoom-in;
@@ -177,7 +181,7 @@
         .copyright-item {
             margin: 5px 0;
         }
-        
+
         .dark-theme & {
             border-top: 1px solid $dark-border-color;
             border-bottom: 1px solid $dark-border-color;
@@ -221,6 +225,7 @@
         & a.next {
             float: right;
         }
+
         & a.next:hover {
             transform: translateX(4px);
         }
@@ -230,7 +235,7 @@
         content: " / ";
     }
 
-    .post-comment{
+    .post-comment {
         padding: 3em 0;
     }
 }
