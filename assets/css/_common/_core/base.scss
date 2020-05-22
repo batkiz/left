@@ -6,8 +6,6 @@
 /* Noto Serif SC */
 @import url(https://fonts.loli.net/css?family=Noto+Serif+SC&display=swap);
 
-
-
 html {
   &::-webkit-scrollbar {
     width: 8px;
@@ -31,15 +29,15 @@ html {
 }
 
 html {
-  font-family: 'Noto Serif SC', serif;
+  font-family: "Noto Serif SC", serif;
 }
 
 body {
   font-size: 16px;
   font-weight: 400;
   line-height: 2em;
-  background-color: $light-background-color;
-  color: $light-font-color;
+  background-color: $background-color;
+  color: $font-color;
 
   &:before {
     content: "";
@@ -59,34 +57,19 @@ body {
     filter: grayscale(100%);
     filter: gray;
   }
-
-  &.dark-theme {
-    background-color: $dark-background-color;
-    color: $dark-font-color;
-  }
 }
 
 a {
-  color: $light-global-link-color;
+  color: $global-link-color;
   text-decoration: none;
-  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease,
+    opacity 0.2s ease;
 
   &:hover {
-    color: $light-global-link-hover-color;
+    color: $global-link-hover-color;
     text-decoration: none;
-    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-  }
-
-  .dark-theme & {
-    color: $dark-global-link-color;
-    text-decoration: none;
-    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-
-    &:hover {
-      color: $dark-global-link-hover-color;
-      text-decoration: none;
-      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-    }
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease,
+      opacity 0.2s ease;
   }
 }
 
@@ -99,6 +82,7 @@ blockquote {
   line-height: 2;
   margin: 0px;
   font-style: italic;
+  border-color: $border-color;
 
   &:after {
     // content: "#blockquote"attr(cite);
@@ -106,9 +90,5 @@ blockquote {
     text-align: right;
     font-size: 0.875em;
     color: #999;
-  }
-
-  .dark-theme & {
-    border-color: $dark-border-color;
   }
 }

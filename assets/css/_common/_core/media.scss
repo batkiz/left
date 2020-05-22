@@ -15,7 +15,7 @@
             margin: 0;
             height: 5em;
             line-height: 5.5em;
-            background: $light-background-color;
+            background: $background-color;
 
             .navbar-header {
                 display: flex;
@@ -42,10 +42,6 @@
                         -webkit-transition: .25s margin .25s, .25s transform;
                         -moz-transition: .25s margin .25s, .25s transform;
                         transition: .25s margin .25s, .25s transform;
-
-                        .dark-theme & {
-                            background: $dark-font-color;
-                        }
                     }
 
                     span:nth-child(1) {
@@ -101,15 +97,6 @@
                 &.active {
                     display: block;
                 }
-
-                .dark-theme & {
-                    background: $dark-background-color;
-                    border-top: 2px solid $dark-font-secondary-color;
-                }
-            }
-
-            .dark-theme & {
-                background: $dark-background-color !important;
             }
         }
     }

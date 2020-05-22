@@ -39,33 +39,20 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         max-width: 95%;
+        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
 
         &:hover {
-            color: $light-global-link-hover-color;
+            color: $global-link-hover-color;
             background-color: transparent;
-        }
-
-        .dark-theme & {
-            color: $dark-global-link-color;
             text-decoration: none;
-            transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-
-            &:hover {
-                color: $dark-global-link-hover-color;
-                text-decoration: none;
                 transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-            }
         }
     }
 
     .archive-item-date {
         float: right;
         text-align: right;
-        color: $light-font-secondary-color;
-
-        .dark-theme & {
-            color: $dark-font-secondary-color;
-        }
+        color: $font-secondary-color;
     }
 
     .more-post {

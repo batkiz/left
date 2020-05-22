@@ -25,14 +25,7 @@ jQuery(function ($) {
     };
 
     _Blog.toggleTheme = function () {
-        const currentTheme = window.localStorage && window.localStorage.getItem('theme')
-        const isDark = currentTheme === 'dark'
-        $('body').toggleClass('dark-theme', isDark)
-        $('.theme-switch').on('click', () => {
-            $('body').toggleClass('dark-theme')
-            window.localStorage &&
-                window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light')
-        })
+
     }
 
     _Blog.toggleMobileMenu = function () {

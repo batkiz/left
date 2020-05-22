@@ -1,25 +1,28 @@
 {{ $cdn_url := .Scratch.Get "cdn_url" }}
 {{ $postHasImages :=  .Scratch.Get "postHasImages"}}
-{{ $jquery := resources.Get "/js/jquery.min.js" }}
-{{ $lazysizes := resources.Get "/js/lazysizes.min.js"}}
-{{ $dynamic := resources.Get "/js/dynamic.to.top.min.js" }}
-{{ $main := resources.Get "/js/main.js" }}
-{{ $lihtGallery := resources.Get "/js/lightGallery-all.min.js" }}
-{{ $lihtGallery_init := resources.Get "/js/lightGallery-init.js" }}
+{{ $dynamic := resources.Get "/js/dynamic.to.top.min.js" | resources.Minify }}
+{{ $main := resources.Get "/js/main.js" | resources.Minify }}
+{{ $lihtGallery_init := resources.Get "/js/lightGallery-init.js" | resources.Minify }}
 {{ if .IsPage }}
 
-    {{ if $postHasImages }}
-        <link href="https://lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">
-        {{ $vendorscript := slice $jquery $lazysizes $dynamic $main $lihtGallery $lihtGallery_init | resources.Concat "/js/vendor_gallery.js" | resources.Minify }} 
-        <script src="{{ printf "%s%s" $cdn_url $vendorscript.RelPermalink }}" async="" ></script>
-    {{ else }}
-        {{ $vendorscript := slice $jquery $dynamic $main | resources.Concat "/js/vendor_no_gallery.js" | resources.Minify }}
-        <script src="{{ printf "%s%s" $cdn_url $vendorscript.RelPermalink }}" async=""></script>
-    {{ end }}
-  
+{{ if $postHasImages }}
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.7.0/css/lightgallery.min.css" rel="stylesheet">
+<script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.7.0/js/lightgallery-all.min.js" async></script>
+<script src="https://cdnjs.loli.net/ajax/libs/lazysizes/5.2.1-rc2/lazysizes.min.js" async></script>
+<script src="{{ $dynamic.RelPermalink }}" async></script>
+<script src="{{ $main.RelPermalink }}" async></script>
+<script src="{{ $lihtGallery_init.RelPermalink }}" async></script>
 {{ else }}
-    {{ $main := slice  $jquery $main | resources.Concat "/js/vendor_main.js" | resources.Minify}}
-    <script src="{{ printf "%s%s" $cdn_url $main.RelPermalink }}" async=""></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{ $dynamic.RelPermalink }}" async></script>
+<script src="{{ $main.RelPermalink }}" async></script>
+{{ end }}
+
+{{ else }}
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{ $main.RelPermalink }}" async></script>
+<script src="{{ $dynamic.RelPermalink }}" async></script>
 {{ end }}
 
 {{ if eq ( getenv "HUGO_ENV" ) "production" }}

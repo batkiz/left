@@ -8,7 +8,7 @@
                 rel="author">{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}</a>
             <span class="post-time">
                 {{ i18n "on" }} <time
-                    datetime={{.Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}>{{ .Date.Format (.Site.Params.dateFormatToUse | default "2 January 2006") }}</time>
+                    datetime={{.Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}>{{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}</time>
             </span>
             {{ with .Params.categories -}}
             {{ i18n "in" }}

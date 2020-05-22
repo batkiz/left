@@ -4,11 +4,14 @@
         {{ with .Site.Params.since }}
         <span itemprop="copyrightYear">{{.}} - {{ now.Year }}</span>
         {{ end }}
-         {{ if .Site.Params.author }}
-            <span class="author" itemprop="copyrightHolder"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.author  }}</a> | </span>
-         {{ end }}
+        {{ if .Site.Params.author }}
+        <span class="author" itemprop="copyrightHolder"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.author  }}</a> |
+        </span>
+        {{ end }}
 
-		  <span>powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> & <a href="https://github.com/batkiz/left" target="_blank" rel="external nofollow noopener noreffer">left</a></span>
+        <span>powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a>
+            & <a href="https://github.com/batkiz/left" target="_blank"
+                rel="external nofollow noopener noreffer">left</a></span>
     </div>
 </footer>
 
