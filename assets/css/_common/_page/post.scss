@@ -39,19 +39,52 @@
       padding-top: 0.8em;
       padding-bottom: 0.3em;
     }
-    /*
+
     h2::before {
       content: "#";
       margin-right: 5px;
-      color: $post-link-color;
+      color: $font-secondary-color;
     }
 
     h3::before {
       content: "##";
       margin-right: 5px;
-      color: $post-link-color;
+      color: $font-secondary-color;
     }
-    */
+
+    a.anchor {
+      float: left;
+      margin-left: -20px;
+      padding-right: 6px;
+      box-shadow: none;
+      opacity: 0.8;
+      &:hover {
+        background: none;
+        color: $global-link-hover-color;
+        opacity: 1;
+      }
+
+      svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: baseline;
+        visibility: hidden;
+      }
+      &:focus svg {
+        visibility: visible;
+      }
+    }
+
+    h1:hover a.anchor svg,
+    h2:hover a.anchor svg,
+    h3:hover a.anchor svg,
+    h4:hover a.anchor svg,
+    h5:hover a.anchor svg,
+    h6:hover a.anchor svg {
+      visibility: visible;
+    }
+
     a {
       color: $post-link-color;
     }
