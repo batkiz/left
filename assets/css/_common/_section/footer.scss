@@ -50,7 +50,5 @@
       no-repeat center center;
   }
 
-  .dark-theme & {
-    border: 1px solid $border-color;
-  }
+  border: 1px solid $border-color;
 }
