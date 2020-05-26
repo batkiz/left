@@ -105,10 +105,8 @@
     }
 
     code:not([class]) {
-      padding: 5px 5px;
-      border: 0px;
-      border-radius: 0px;
-
+      border: 1px solid $border-color;
+      padding: 0 0.3em;
       background: transparent;
     }
 
