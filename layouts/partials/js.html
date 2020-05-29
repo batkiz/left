@@ -24,7 +24,9 @@
 {{ template "_internal/google_analytics_async.html" . }}
 
 {{ if .Site.Params.mathjax }}
+{{ if .Params.mathjax }}
 {{ partial "mathjax.html" . }}
+{{ end }}
 {{ end }}
 
 {{ partial "highlight.html" . }}
