@@ -6,6 +6,8 @@
 /* Noto Serif SC */
 @import url(https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap);
 
+@import url(https://fonts.loli.net/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+
 html {
   &::-webkit-scrollbar {
     width: 8px;
@@ -29,7 +31,7 @@ html {
 }
 
 html {
-  font-family: "Noto Serif SC", serif;
+  font-family: "Noto Serif SC", "Noto Serif", serif;
 }
 
 body {
