@@ -29,6 +29,19 @@ mathjax = true
 ```
 both to your site config file and your article file frontmatters.(the example is `toml` code, use yaml or json based on your own config file/article frontmatters)
 
+## shortcodes
+
+### repl
+
+[repl.it](repl.it) is a pretty cool programming platform, also it provide a "embed code" share. Since hugo had disabled raw html by default from v0.60, so i write a shortcode to share repl code.
+
+usage: 
+```
+{{< repl "username/repl-name" >}}
+```
+
+you could find your repl's "username/repl-name" from the address bar, be caution that *the username don't inculde the @ symbol*.
+
 ## example config
 
 an example config file is like this:
