@@ -1,5 +1,5 @@
 {{ $cdn_url := .Scratch.Get "cdn_url" }}
-{{ $postHasImages :=  .Scratch.Get "postHasImages"}}
+{{ $postHasImages := .Scratch.Get "postHasImages"}}
 {{ $dynamic := resources.Get "/js/dynamic.to.top.min.js" | resources.Minify }}
 {{ $main := resources.Get "/js/main.js" | resources.Minify }}
 {{ $lihtGallery_init := resources.Get "/js/lightGallery-init.js" | resources.Minify }}
@@ -23,10 +23,9 @@
 
 {{ template "_internal/google_analytics_async.html" . }}
 
-{{ if .Site.cfWebAnalyticsToken }}
+{{ with .Site.Params.cfWebAnalyticsToken }}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-    data-cf-beacon='{"token": "{{ .Site.cfWebAnalyticsToken }}"}'></script>
-    
+    data-cf-beacon='{"token": "{{ . }}"}'></script>
 {{ end }}
 
 {{ if .Site.Params.mathjax }}
