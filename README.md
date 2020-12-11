@@ -59,6 +59,7 @@ enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = ""
 disqusShortname = "yourdiscussshortname"
+cfWebAnalyticsToken = ""
 
 [sitemap]
     changefreq = "monthly"
