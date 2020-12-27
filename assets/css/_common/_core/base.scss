@@ -85,7 +85,8 @@ blockquote {
   padding: 0 28px;
   line-height: 2;
   margin: 0px;
-  font-style: italic;
+  // font-style: italic;
+  font-weight: lighter;
   border-color: $border-color;
 
   &:after {
