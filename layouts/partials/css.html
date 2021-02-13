@@ -1,8 +1,6 @@
-{{ $style := resources.Get "css/light.scss" | resources.ToCSS | resources.Minify}}
-{{ $darkStyle := resources.Get "css/dark.scss" | resources.ToCSS | resources.Minify}}
+{{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify}}
 {{ $iconfont := resources.Get "font/iconfont.css" }}
 <link rel="stylesheet" href="{{ $iconfont.RelPermalink }}">
 <style type="text/css">
     @import url('{{ $style.RelPermalink }}');
-    @import url('{{ $darkStyle.RelPermalink }}') screen and (prefers-color-scheme: dark);
 </style>

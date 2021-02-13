@@ -1,12 +1,12 @@
 /** Font **/
 
 /* Fira Code */
-@import url("https://fonts.loli.net/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 /* Noto Serif SC */
-@import url("https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap");
 
-@import url("https://fonts.loli.net/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 html {
   &::-webkit-scrollbar {
@@ -31,9 +31,9 @@ html {
 }
 
 html {
-  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN",
-    "Source Han Serif", "source-han-serif-sc", "Noto Serif SC", "Noto Serif",
-    serif;
+  font-family: "Noto Serif", "Noto Serif CJK SC", "Noto Serif CJK",
+    "Source Han Serif SC", "Source Han Serif", source-han-serif-sc,
+    "Noto Serif SC", serif;
 }
 
 body {
