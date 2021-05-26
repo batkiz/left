@@ -1,17 +1,27 @@
-$background-color: #292a2d;
+@mixin dark-theme {
+  --theme-name: "dark";
 
-$font-color: #a9a9b3;
-$font-secondary-color: #87878d;
+  --background-color: #292a2d;
 
-$navbar-active-color: #fff;
+  --font-color: #a9a9b3;
+  --font-secondary-color: #87878d;
 
-$global-link-color: #a9a9b3;
-$global-link-hover-color: #fff;
+  --navbar-active-color: #fff;
 
-$post-link-color: #eee;
-$post-link-hover-color: #fff;
+  --global-link-color: #a9a9b3;
+  --global-link-hover-color: #fff;
 
-$pagination-link-color: #a9a9b3;
-$pagination-link-active-color: #fff;
+  --post-link-color: #eee;
+  --post-link-hover-color: #fff;
 
-$border-color: #4a4b50;
+  --pagination-link-color: #a9a9b3;
+  --pagination-link-active-color: #fff;
+
+  --border-color: #4a4b50;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-theme;
+  }
+}

@@ -1,11 +1,14 @@
-@media (prefers-color-scheme: light) {
-  :root {
-    @import "light";
-  }
-}
+@import "light";
+@import "dark";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    @import "dark";
-  }
-}
+$background-color: var(--background-color);
+$font-color: var(--font-color);
+$font-secondary-color: var(--font-secondary-color);
+$navbar-active-color: var(--navbar-active-color);
+$global-link-color: var(--global-link-color);
+$global-link-hover-color: var(--global-link-hover-color);
+$post-link-color: var(--post-link-color);
+$post-link-hover-color: var(--post-link-hover-color);
+$pagination-link-color: var(--pagination-link-color);
+$pagination-link-active-color: var(--pagination-link-active-color);
+$border-color: var(--border-color);
